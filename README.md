@@ -1,1 +1,1 @@
-# ezpubsub
+# EzPubSub
