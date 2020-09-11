@@ -22,6 +22,5 @@
   "dependencies": {
     "faye": "^1.4.0",
     "permessage-deflate": "^0.1.7"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
