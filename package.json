@@ -1,0 +1,27 @@
+{
+  "name": "ezpubsub",
+  "version": "1.0.0",
+  "description": "Simple pub/sub messaging",
+  "main": "src/client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EzPubSub/ezpubsub.git"
+  },
+  "keywords": [
+    "pub/sub"
+  ],
+  "author": "Nyi Nyi Lwin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EzPubSub/ezpubsub/issues"
+  },
+  "homepage": "https://github.com/EzPubSub/ezpubsub#readme",
+  "dependencies": {
+    "faye": "^1.4.0",
+    "permessage-deflate": "^0.1.7"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+}
