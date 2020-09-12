@@ -6,7 +6,7 @@ const checkAppKey =  appId => {
     if (appId === null || appId === undefined) throw 'You must pass your app id when you instantiate NgaNyi.';
 }
 const getServerUrl = cluster => `https://${cluster}.ezpubsub.com`;
-let fayeClass =  class fayeClient {
+let ezPubSubClass =  class fayeClient {
     constructor(appId, options, other = {
         retry: 5,
         timeout: 120
@@ -45,14 +45,14 @@ let fayeClass =  class fayeClient {
         this.client = client
     }
     wildCardChannel(channel, data) {
-        this.client.subscribe(`/${this.appId}${channel}`).withChannel(data)
+        return this.client.subscribe(`/${this.appId}${channel}`).withChannel(data)
     }
     subscribeChannel(channel, data) {
-        this.client.subscribe(`/${this.appId}${channel}`, data)
+        return this.client.subscribe(`/${this.appId}${channel}`, data)
     }
     publishChannel(channel, data) {
-        this.client.publish(`/${this.appId}${channel}`, data)
+        return this.client.publish(`/${this.appId}${channel}`, data)
     }
 }
 
-export default fayeClass;
+module.exports = ezPubSubClass;
