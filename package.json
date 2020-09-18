@@ -1,6 +1,6 @@
 {
   "name": "ezpubsub",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Simple pub/sub messaging",
   "main": "src/index.js",
   "scripts": {
@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/EzPubSub/ezpubsub#readme",
   "dependencies": {
-    "faye": "^1.4.0",
-    "permessage-deflate": "^0.1.7"
+    "faye": "^1.4.0"
   },
   "devDependencies": {
     "path": "^0.12.7",
