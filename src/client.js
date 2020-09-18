@@ -1,6 +1,5 @@
 'use strict';
-let Faye = require('faye'),
-    deflate = require('permessage-deflate');
+let Faye = require('faye');
 
 const checkAppKey =  appId => {
     if (appId === null || appId === undefined) throw 'You must pass your app id when you instantiate NgaNyi.';
@@ -14,7 +13,6 @@ let ezPubSubClass =  class fayeClient {
         checkAppKey(appId)
         let server_url = getServerUrl(options.cluster)
         let client = new Faye.Client(server_url, other)
-        client.addWebsocketExtension(deflate);
         client.addExtension({
             outgoing: (message, callback) => {
                 message.channel = message.channel.replace('//', '/')
