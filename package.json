@@ -1,6 +1,6 @@
 {
   "name": "ezpubsub",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple pub/sub messaging",
   "main": "src/index.js",
   "scripts": {
